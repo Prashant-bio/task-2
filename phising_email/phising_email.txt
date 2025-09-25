@@ -1,0 +1,92 @@
+Phishing Email Analysis Report
+1. Email Sample (Suspicious)
+
+From: support@paypai.com
+Subject: Your Account Will Be Suspended – Immediate Action Required!
+Body (excerpt):
+
+Dear Customer,
+Your account has been flagged due to suspicious login attempts. To avoid suspension, please verify your details immediately.
+Click here to verify your account
+
+Failure to act will result in permanent account closure.
+
+2. Sender Address Check
+
+Claimed sender: support@paypai.com
+
+Observation: Domain looks like PayPal, but notice the typo → “paypai.com” instead of “paypal.com” → classic email spoofing / look-alike domain.
+
+3. Header Analysis 
+
+Return-Path: <support@randomserver.ru> (different from displayed sender).
+
+Received From: IP traced to a server in Russia, not PayPal’s known mail servers.
+
+SPF/DKIM/DMARC: Authentication failed.
+
+👉 Discrepancy: Sender domain doesn’t align with actual sending server.
+
+4. Suspicious Links
+
+Hovered link shows: http://paypai-security-check.com/verify
+
+Not HTTPS, uses misspelled domain, and hosted on non-PayPal server.
+
+URL scan (VirusTotal / Sucuri) flagged as malicious phishing site.
+
+5. Attachments
+
+No attachments in this sample.
+
+⚠️ Many phishing emails carry .zip, .exe, or malicious .docx with macros.
+
+6. Language & Tone
+
+Uses urgent and threatening language:
+
+“Immediate Action Required”
+
+“Your account will be suspended”
+
+“Permanent account closure”
+
+Psychological tactic (social engineering): Fear + urgency.
+
+7. Spelling & Grammar
+
+Minor errors:
+
+“spe ling” type mistakes.
+
+Generic greeting: “Dear Customer” instead of real name.
+
+8. Key Phishing Traits Identified
+
+✅ Email Spoofing (fake sender domain)
+
+✅ Header Discrepancies (SPF/DKIM/DMARC fail, foreign server)
+
+✅ Suspicious Links (mismatched domain, HTTP not HTTPS)
+
+✅ Urgent/Threatening Tone (account suspension warning)
+
+✅ Generic Greeting (not personalized)
+
+✅ Grammar/Spelling Errors
+
+🔑 Concepts Covered
+
+Phishing: Fraudulent attempt to trick users into revealing credentials.
+
+Email Spoofing: Fake sender addresses to appear legitimate.
+
+Header Analysis: Checking technical metadata for authenticity.
+
+Social Engineering: Psychological manipulation (fear/urgency).
+
+Threat Detection: Identifying mismatched URLs, suspicious domains, and failed security checks.
+
+✅ Final Note (Deliverable):
+This email is confirmed phishing.
+Recommendation: Do not click links or open attachments. Report to IT/security team.
